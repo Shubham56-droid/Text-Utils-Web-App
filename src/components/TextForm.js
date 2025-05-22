@@ -17,6 +17,23 @@ export default function TextForm(props) {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
   }
+  const handleTitleCase = () => {
+    let newText = text
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+    setText(newText);
+  };
+
+  const handleReverseText = () => setText(text.split("").reverse().join(""));
+   const handleDownload = () => {
+    const element = document.createElement("a");
+    const file = new Blob([text], { type: "text/plain" });
+    element.href = URL.createObjectURL(file);
+    element.download = "text.txt";
+    element.click();
+  };
 
   return (
     <>
@@ -35,6 +52,9 @@ export default function TextForm(props) {
       <button className="btn btn-primary m-2" onClick={handleLowercase}>Lowercase</button>
       <button className="btn btn-primary m-2" onClick={handleCopy}>Copy Text</button>
       <button className="btn btn-primary m-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+      <button className="btn btn-primary m-2" onClick={handleTitleCase}>Title Case</button>
+      <button className="btn btn-primary m-2" onClick={handleReverseText}>Reverse</button>
+      <button className="btn btn-primary m-2" onClick={handleDownload}>Download</button>
       <button className="btn btn-danger m-2" onClick={handleReset}>Reset</button>
     </div>
 
