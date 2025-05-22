@@ -93,12 +93,14 @@ export default function TextForm(props) {
         <h4 className="heading my-2">{props.heading1}</h4>
         <div className="mb-3">
           <textarea
-            className="form-control"
-            id="textForm"
-            rows="5"
-            value={text}
-            onChange={handleOnChange}
-          ></textarea>
+  className="form-control"
+  id="textForm"
+  rows="5"
+  value={text}
+  onChange={handleOnChange}
+  style={{ color: props.selectedColor }} // ← Add this line
+/>
+
         </div>
         <button className="btn mx-2 btn-clr" onClick={handleUppercase}>
           Uppercase
@@ -135,13 +137,14 @@ export default function TextForm(props) {
           {text.length === 0 ? 0 : text.split(" ").length * 0.008} min
         </p>
         <h4 className="my-3 heading">{props.heading3}</h4>
-        <p className="preview-text">
-          {text.length > 0
-            ? text.length < 500
-              ? text
-              : text.substring(0, 500 - 3) + "..."
-            : "Enter something in textbox above to preview here..."}
-        </p>
+        <p className="preview-text" style={{ color: props.selectedColor }}> {/* ← Add style here */}
+  {text.length > 0
+    ? text.length < 500
+      ? text
+      : text.substring(0, 500 - 3) + "..."
+    : "Enter something in textbox above to preview here..."}
+</p>
+
       </div>
     </>
   );
