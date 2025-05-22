@@ -6,9 +6,18 @@
 
 .heading{
   font-family: "Exo 2", sans-serif;
-  color:#0099ff;
+  color:#292929;
   margin-top: 50px;
   font-size: 30px;
+  font-weight: 700;
+}
+
+.heading.darkmodeactive{
+ color:#fff;
+}
+
+.mixmode{
+  mix-blend-mode: difference;
 }
 
 .navbar-brand{
@@ -20,19 +29,18 @@
   align-items: center;
 }
 #nav1 {
-  background-color: #ffffff;
-}
-.mixmode {
-  mix-blend-mode: difference;
+  background-color: #fff;
+  box-shadow: 3px 0px 10px #00000092;
+  background:linear-gradient(45deg,#fff,#d2b9ff);
 }
 
-#mixModeBtn {
-  color: #000000;
+#mixModeBtn{
+  color: #171717;
   font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000000;
+  border: 1.5px solid #020202;
   width: 35px;
   height: 35px;
   margin: 10px;
@@ -40,11 +48,19 @@
   cursor: pointer;
 }
 
-#mainbody {
+#mixModeBtn.lightmodeactive{
+  color: #de9b00;
+  border: 1.5px solid  #de9b00;
+}
+
+#mainbody{
   position: relative;
-  background-color: #ededed;
+  background-color: #dfdfdfa5;
   min-height: 93vh;
   padding-bottom: 10px;
+}
+#mainbody.darkmodeactive{
+   background-color: #222;
 }
 
 .preview-text {
@@ -55,45 +71,54 @@
   border-radius: 10px;
   color: #444;
 }
-
+.preview-text.darkmodeactive{
+  background-color: #000;
+  color: #eee;
+}
 .btn-clr {
   background: #0149d9;
-  background:linear-gradient(#0099ff,#9900ff);
+  background:linear-gradient(45deg,#39b0ff,#aa31fb);
   border: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Space Grotesk", sans-serif;
 }
 .btn-clr:hover {
   box-shadow: none;
-  background:linear-gradient(#39b0ff,#aa31fb);
+  background:linear-gradient( #0099ff, #9900ff);
   color: #fff;
 }
-textarea {
-  font-family: "Roboto Slab", serif;
-}
-#alert-box {
-  background-color: rgb(0, 170, 255);
+
+textarea{
   font-family: "Roboto Slab", serif;
 }
 
-.footer-box {
+#alert-box {
+  font-family: "Roboto Slab", serif;
+}
+
+.footer-box{
   height: 51.5px;
   width: 100%;
   text-align: center;
   padding-top: 10px;
-  background-color: #fff;
+  background-color: #000;
   font-family: "Dancing Script", cursive;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -3px 0px 10px #ffffff53;
 }
 
 .footer-box ion-icon {
-  color: #000;
+  color: #fff;
+  font-size:32px;
 }
 #logo-img {
-  width: 1.6em;
+  width: 5em;
   mix-blend-mode: normal;
 }
 
@@ -103,23 +128,28 @@ textarea {
   margin-bottom: 20px;
   text-align: center;
   margin-top: 20px;
-  background: -webkit-linear-gradient(#9900ff,#0099ff);
+  background: -webkit-linear-gradient(45deg,#39b0ff,#aa31fb);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 #footer-container p.description {
   font-size: 1.2rem;
   margin-bottom: 40px;
   text-align: center;
 }
-
+#footer-container.darkmodeactive p.description{
+  color: #fff;
+}
 #footer-container .social-icons {
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-bottom: 60px;
 }
+
 
 #footer-container .social-icons a {
   text-decoration: none;
@@ -131,6 +161,9 @@ textarea {
   font-size: 40px;
   color: #333;
   transition: color 0.3s;
+}
+#footer-container.darkmodeactive .social-icons ion-icon{
+  color: #ddd;
 }
 
 #footer-container .social-icons a:hover ion-icon {
@@ -144,7 +177,9 @@ textarea {
 #footer-container .social-icons .github:hover ion-icon {
   color: #333; /* GitHub Black */
 }
-
+#footer-container.darkmodeactive .social-icons .github:hover ion-icon {
+  color: #d641ff;
+}
 #footer-container .social-icons .linkedin:hover ion-icon {
   color: #0077b5; /* LinkedIn Blue */
 }
@@ -164,11 +199,16 @@ textarea {
   font-size: 60px;
   color: #555;
 }
-
+#footer-container.darkmodeactive .footer-logo ion-icon{
+  color: #bbb;
+}
 #footer-container .footer-logo p {
   margin-top: 10px;
   font-size: 1rem;
   color: #555;
+}
+#footer-container.darkmodeactive .footer-logo p{
+  color:#bbb
 }
 
 #aboutContent .about-heading{
@@ -176,7 +216,7 @@ textarea {
   margin-bottom: 20px;
   text-align: center;
   margin-top: 20px;
-  background: -webkit-linear-gradient(#9900ff,#0099ff);
+  background: -webkit-linear-gradient(45deg,#39b0ff,#aa31fb);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -184,10 +224,11 @@ textarea {
 .nav-item .nav-link{
   font-size: 20px;
   margin-left: 10px;
+  color: #040404;
 }
 
 .nav-item .nav-link.active{
-  color: #0099ff;
+  color:#9900ff;
   font-weight: 500;
 }
 

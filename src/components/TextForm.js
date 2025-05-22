@@ -9,25 +9,25 @@ export default function TextForm(props) {
   const handleUppercase = () => {
     if (text.length > 0) {
       setText(text.toUpperCase());
-      props.showAlert("Converted to Uppercase", "Success");
+      props.showAlert("Converted to Uppercase", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
   const handleLowercase = () => {
     if (text.length > 0) {
       setText(text.toLowerCase());
-      props.showAlert("Converted to Lowercase", "Success");
+      props.showAlert("Converted to Lowercase", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
   const handleReset = () => {
     if (text.length > 0) {
       setText("");
-      props.showAlert("Reset the whole text", "Success");
+      props.showAlert("Reset the whole text", "danger");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
 
@@ -36,18 +36,18 @@ export default function TextForm(props) {
       const textForm = document.getElementById("textForm");
       textForm.select();
       document.execCommand("copy");
-      props.showAlert("Text is copied to clipboard", "Success");
+      props.showAlert("Text is copied to clipboard", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
   const handleExtraSpaces = () => {
     if (text.length > 0) {
       let newText = text.split(/[ ]+/);
       setText(newText.join(" "));
-      props.showAlert("Extra Spaces is been removed", "Success");
+      props.showAlert("Extra Spaces is been removed", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
 
@@ -59,18 +59,18 @@ export default function TextForm(props) {
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
       setText(newText);
-      props.showAlert("Convert to title case", "Success");
+      props.showAlert("Convert to title case", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
 
   const handleReverseText = () => {
     if (text.length > 0) {
       setText(text.split("").reverse().join(""));
-      props.showAlert("Text is reversed", "Success");
+      props.showAlert("Text is reversed", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
 
@@ -81,9 +81,9 @@ export default function TextForm(props) {
       element.href = URL.createObjectURL(file);
       element.download = "text.txt";
       element.click();
-      props.showAlert("File Started Downloading...", "Success");
+      props.showAlert("File Started Downloading...", "success");
     } else {
-      props.showAlert("Please enter the text first", "Warning");
+      props.showAlert("Please enter the text first", "warning");
     }
   };
 
@@ -128,14 +128,14 @@ export default function TextForm(props) {
 
       <div className="container my-3">
         <h4 className="heading my-3">{props.heading2}</h4>
-        <p>
+        <p id="detailsText">
           <b>Wrods:</b> {text.length === 0 ? 0 : text.split(" ").length} <br />
           <b>Charecters:</b> {text.length} <br />
           <b>Reading Time:</b>{" "}
           {text.length === 0 ? 0 : text.split(" ").length * 0.008} min
         </p>
         <h4 className="my-3 heading">{props.heading3}</h4>
-        <p className="preview-text">
+        <p className="preview-text" id="preview-text">
           {text.length > 0
             ? text.length < 500
               ? text

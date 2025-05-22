@@ -4,12 +4,12 @@ export default function Contact() {
   return (
     <div className="container" id="footer-container">
     <h1>Contact Us</h1>
-    <p className="description">
+    <p className="description" id="descriptionContact">
       Have questions or feedback about Text Utils? We'd love to hear from you!
       Reach out through any of the platforms below.
     </p>
 
-    <div className="social-icons">
+    <div className="social-icons" id="social-icons-contacts">
       <a href="https://www.linkedin.com/in/shubham-bawankar-458342200/" className="linkedin">
         <ion-icon name="logo-linkedin"></ion-icon>
         <span>LinkedIn</span>
