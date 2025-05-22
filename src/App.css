@@ -1,78 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
 
 .heading{
-  font-family: "Space Grotesk", sans-serif;
-  color: #4f007fee;
+  font-family: "Exo 2", sans-serif;
+  color:#0099ff;
+  margin-top: 50px;
+  font-size: 30px;
 }
 
 .navbar-brand{
   font-weight: 400;
   font-family: "Poetsen One", sans-serif;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#nav1{
+#nav1 {
   background-color: #ffffff;
-  box-shadow: 0px 2px 5px #d5d5d5;
 }
-.mixmode{
+.mixmode {
   mix-blend-mode: difference;
 }
 
-#mixModeBtn{
+#mixModeBtn {
   color: #000000;
   font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #000000;
-  width:35px;
-  height:35px;
-  margin:10px;
-  border-radius:50%;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-#mainbody{
-position: relative;
-background-color:#ededed;
-min-height:93vh;
-padding-bottom:10px;
+#mainbody {
+  position: relative;
+  background-color: #ededed;
+  min-height: 93vh;
+  padding-bottom: 10px;
 }
 
-.preview-text{
-  background-color: #d3d3d3;
+.preview-text {
+  background-color: #d8d8d8;
   padding: 10px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
   border-radius: 10px;
+  color: #444;
 }
 
-.btn-clr{
-  background:#0149d9;
+.btn-clr {
+  background: #0149d9;
+  background:linear-gradient(#0099ff,#9900ff);
   border: none;
   color: #fff;
-  font-size:20px;
+  font-size: 20px;
   font-family: "Space Grotesk", sans-serif;
-  box-shadow:-2px 2px 2.5px #5e5e5e;
 }
-.btn-clr:hover{
+.btn-clr:hover {
   box-shadow: none;
-  background:#8001ba;
+  background:linear-gradient(#39b0ff,#aa31fb);
   color: #fff;
 }
-textarea{
+textarea {
   font-family: "Roboto Slab", serif;
 }
-#alert-box{
+#alert-box {
   background-color: rgb(0, 170, 255);
   font-family: "Roboto Slab", serif;
 }
 
-.footer-box{
-  height:51.5px;
+.footer-box {
+  height: 51.5px;
   width: 100%;
   text-align: center;
   padding-top: 10px;
@@ -83,6 +89,114 @@ textarea{
   font-size: 20px;
 }
 
-.footer-box ion-icon{
-  color:#000;
+.footer-box ion-icon {
+  color: #000;
+}
+#logo-img {
+  width: 1.6em;
+  mix-blend-mode: normal;
+}
+
+
+#footer-container h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background: -webkit-linear-gradient(#9900ff,#0099ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#footer-container p.description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#footer-container .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+#footer-container .social-icons a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+#footer-container .social-icons ion-icon {
+  font-size: 40px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#footer-container .social-icons a:hover ion-icon {
+  color: #0077b5; /* LinkedIn Blue as default hover color */
+}
+
+#footer-container .social-icons .gmail:hover ion-icon {
+  color: #d44638; /* Gmail Red */
+}
+
+#footer-container .social-icons .github:hover ion-icon {
+  color: #333; /* GitHub Black */
+}
+
+#footer-container .social-icons .linkedin:hover ion-icon {
+  color: #0077b5; /* LinkedIn Blue */
+}
+
+#footer-container .social-icons span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+#footer-container .footer-logo {
+  text-align: center;
+  margin-top: 80px;
+}
+
+#footer-container .footer-logo ion-icon {
+  font-size: 60px;
+  color: #555;
+}
+
+#footer-container .footer-logo p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+#aboutContent .about-heading{
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+  background: -webkit-linear-gradient(#9900ff,#0099ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-item .nav-link{
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.nav-item .nav-link.active{
+  color: #0099ff;
+  font-weight: 500;
+}
+
+#text-form-container{
+  margin-top: 30px;
+}
+
+#alert-box{
+  position: absolute;
+  right: 0;
+  width: 40%;
 }

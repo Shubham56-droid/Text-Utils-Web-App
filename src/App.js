@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import Alert from "./components/Alert";
-// import About from "./components/About";
+ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 // htmlFor
 // className
@@ -27,10 +28,11 @@ function App() {
   return (
     <>
     <div id="mainbody">
-      <Navbar title="Text Forge" aboutText="About Us" showAlert={showAlert}/>
+       <Navbar title="Text Forge" aboutText="About Us" showAlert={showAlert}/>
       <Alert alert={alert}/>
-      <TextForm heading1="Text For Analysis" heading2="Text Summary" heading3="Summary Preview" showAlert={showAlert}/>
-      {/* <About/> */}
+      <TextForm heading1="Text For Analysis" heading2="Text Summary" heading3="Summary Preview" showAlert={showAlert}/> 
+      {/* <About/>
+      <Contact/> */}
     </div>
     <Footer/>
     </>

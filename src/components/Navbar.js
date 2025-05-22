@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import PropTypes from 'prop-types'
-
+import logo from '../logo.jpg'
 
 export default function Navbar(props){
   const [modeval, setMode] = useState("moon");
@@ -27,7 +27,7 @@ export default function Navbar(props){
     <nav className="navbar navbar-expand-lg" id="nav1">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          {props.title}
+          <img id="logo-img" alt="logo-img" src={logo}/>{props.title}
         </a>
         <button
           className="navbar-toggler"
