@@ -9,11 +9,15 @@ export default function Navbar(props){
     if(modeval === "moon"){
       setMode("sunny");
       document.getElementById('mainbody').classList.add('mixmode');
+      props.showAlert("Dark Mode is Enabled","Success");
+      document.getElementById("footer-box").classList.add('mixmode');
     }
     else
     {
       setMode("moon");
       document.getElementById('mainbody').classList.remove('mixmode');
+      props.showAlert("Light Mode is Enabled","Success");
+      document.getElementById("footer-box").classList.remove('mixmode');
     }
 
   }
