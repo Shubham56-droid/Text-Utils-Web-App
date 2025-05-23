@@ -11,4 +11,4 @@
 
 if you wanted to add more features you can add pull resquests.
 # UI of the text utils app
-<img src="./images/image(1) .png>
+<img src="./images/image (1).png" />
