@@ -128,7 +128,7 @@ export default function TextForm(props) {
 
       <div className="container my-3">
         <h4 className="heading my-3">{props.heading2}</h4>
-        <p id="detailsText">
+        <p id='detailsText'>
           <b>Wrods:</b> {text.length === 0 ? 0 : text.split(" ").length} <br />
           <b>Charecters:</b> {text.length} <br />
           <b>Reading Time:</b>{" "}

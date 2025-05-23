@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <BrowserRouter>
       <div id="mainbody">
         <Navbar aboutText="About Us" showAlert={showAlert} />
         <Alert alert={alert} />
@@ -40,7 +40,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 }
 

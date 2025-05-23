@@ -93,6 +93,7 @@ textarea{
   font-family: "Roboto Slab", serif;
 }
 
+
 #alert-box {
   font-family: "Roboto Slab", serif;
 }
@@ -240,4 +241,17 @@ textarea{
   position: absolute;
   right: 0;
   width: 40%;
+}
+
+#textForm.darkmodeactive{
+  background: #000;
+  color: #fff;
+}
+
+#detailsText{
+  color: #000;
+}
+
+#detailsText.darkmodeactive{
+  color: #fff;
 }
