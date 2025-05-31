@@ -34,21 +34,6 @@ This tool offers multiple text transformation and analysis features to enhance p
 - **CSS3**
 - **JavaScript (ES6+)**
 
-## 📂 Project Structure
-
-├── public/
-├── src/
-│ ├── components/
-│ │ ├── Navbar.js
-│ │ └── TextForm.js
-│ ├── App.js
-│ ├── index.js
-│ └── App.css
-├── package.json
-├── README.md
-└── ...
-
-
 ## 🚀 Getting Started
 
 ### 📦 Install Dependencies
