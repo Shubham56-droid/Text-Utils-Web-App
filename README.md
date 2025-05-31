@@ -43,9 +43,11 @@ npm install
 ```
 
 ▶️ Run the App
+```bash
 npm start
+```
 
-e app will run locally at http://localhost:3000
+App will run locally at `http://localhost:3000`
 
 📌 Future Improvements
 Add Dark Mode
