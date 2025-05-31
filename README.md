@@ -9,7 +9,7 @@ This tool offers multiple text transformation and analysis features to enhance p
 
 ## 📸 Screenshots
 
-![TextForge Screenshot](./images/image (1).png)
+![TextForge Screenshot](./images/image(1).png)
 
 ## ✨ Features
 
